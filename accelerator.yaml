@@ -1,0 +1,19 @@
+accelerator:
+  name: rename-package-sample
+  description: A demo project with custom java package name
+  options:
+    - name: pkgName
+      description: The name of the package
+      dataType: string
+      defaultValue: com.user.choseit
+engine:
+  merge:
+  - exclude: [ '**/*.java', '.project', '.classpath' , '.settings/**' ]
+  - include: [ '**/*.java' ] 
+    chain:
+    - type: OpenRewriteRecipe
+      recipe: org.openrewrite.java.ChangePackage
+      options:
+        oldFullyQualifiedPackageName: "'com.renamethis'"
+        newFullyQualifiedPackageName: "#pkgName"
+        recursive: true
