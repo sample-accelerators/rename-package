@@ -8,7 +8,7 @@ accelerator:
       defaultValue: com.user.choseit
 engine:
   merge:
-  - exclude: [ '**/*.java', '.project', '.classpath' , '.settings/**' ]
+  - exclude: [ '**/*.java', '.project', '.classpath' , '.settings/**', 'k8s-resource.yml' ]
   - include: [ '**/*.java' ] 
     chain:
     - type: OpenRewriteRecipe
