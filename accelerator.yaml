@@ -3,6 +3,9 @@ accelerator:
   displayName: Rename Java Package
   iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
   description: A demo project with custom java package name. Show how an accelerator can rename Java packages.
+  tags:
+  - accelerator
+  - openrewrite
   options:
     - name: pkgName
       label: Package
