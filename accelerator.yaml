@@ -20,6 +20,6 @@ engine:
     - type: OpenRewriteRecipe
       recipe: org.openrewrite.java.ChangePackage
       options:
-        oldFullyQualifiedPackageName: "'com.renamethis'"
-        newFullyQualifiedPackageName: "#pkgName"
+        oldPackageName: "'com.renamethis'"
+        newPackageName: "#pkgName"
         recursive: true
